@@ -1,0 +1,5 @@
+name: Shell commands
+
+on: [push]
+
+
