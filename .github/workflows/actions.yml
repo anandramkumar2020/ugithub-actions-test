@@ -11,3 +11,6 @@ jobs:
          uses: actions/hello-world-javascript-action@v1
          with:
           who-to-greet: Anand Ramkumar
+       - name: Log greeting time
+         run: echo "Hello there"
+
