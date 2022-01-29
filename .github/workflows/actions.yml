@@ -6,10 +6,20 @@ jobs:
  run-github-actions:
      runs-on: ubuntu-latest
      steps:
-       - name: List file
+       - name: List file 1st time
          run: |
           pwd
           ls           
+       
+       - name: Checkout
+         id: projcheckout
+         uses: actions/checkout@v2
+
+       - name: List File 2nd time
+         run: |
+          pwd
+          ls 
+
        - name: simple javascript action
          id: greet
          uses: actions/hello-world-javascript-action@v1
@@ -17,3 +27,5 @@ jobs:
           who-to-greet: Anand Ramkumar
        - name: Log greeting time
          run: echo "${{steps.greet.outputs.time}}"
+
+       
