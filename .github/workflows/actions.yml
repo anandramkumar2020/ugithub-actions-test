@@ -1,6 +1,6 @@
 name: Experiments with Javascript Actions
 
-on: [push]
+on: [push,pull_request]
 
 jobs:
  run-github-actions:
@@ -19,7 +19,7 @@ jobs:
          run: |
           pwd
           ls
-          echo $GITHUB_SHA
+          #echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY 
           echo $GITHUB_WORKSPACE
           echo ""
@@ -29,6 +29,7 @@ jobs:
          uses: actions/hello-world-javascript-action@v1
          with:
           who-to-greet: Anand Ramkumar
+
        - name: Log greeting time
          run: echo "${{steps.greet.outputs.time}}"
 
