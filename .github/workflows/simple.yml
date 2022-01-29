@@ -7,7 +7,7 @@ jobs:
    runs-on: ubuntu-latest
    steps:
     - name: echo a string
-      run: echo "Hello Anand"
+      run: echo "Hello KP  Anand Ramkumar"
     
     - name: Multiple commands
       run: |
