@@ -1,9 +1,6 @@
 name: Experiments with Javascript Actions
 
-on: 
- push:
- pullrequest:
-  types:[closed,assigned,opened,reopened]
+on: [push,pullrequest] 
 
 jobs:
  run-github-actions:
