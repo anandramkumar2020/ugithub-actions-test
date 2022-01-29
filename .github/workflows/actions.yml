@@ -13,4 +13,4 @@ jobs:
           who-to-greet: Anand Ramkumar
 
        - name: Log greeting time
-         run: "${{steps.greet.outputs.time}}"
+         run: ${{steps.greet.outputs.time}}       
