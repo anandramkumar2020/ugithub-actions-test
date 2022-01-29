@@ -1,6 +1,8 @@
 name: Experiments with Javascript Actions
 
-on: 
+on:
+ schedule:
+   - cron: "0/3 * * * *" 
  #push
  pull_request:
   types: [closed, opened]
