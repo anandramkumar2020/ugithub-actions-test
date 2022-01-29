@@ -30,3 +30,12 @@ jobs:
       - name: Directorty Bash
         shell: bash
         run: pwd
+
+  run-other-shell-commands:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Current Working Directory
+       id: wrkdir
+       run: |
+        pwd
+        ls
