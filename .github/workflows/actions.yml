@@ -1,6 +1,6 @@
 name: Experiments with Javascript Actions
 
-on: [push,pullrequest] 
+on: [push,pull_request] 
 
 jobs:
  run-github-actions:
@@ -19,7 +19,7 @@ jobs:
          run: |
           pwd
           ls
-          eecho $GITHUB_SHA
+          echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY 
           echo $GITHUB_WORKSPACE
           echo ""
