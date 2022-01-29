@@ -18,8 +18,12 @@ jobs:
        - name: List File 2nd time
          run: |
           pwd
-          ls 
-
+          ls
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY 
+          echo $GITHUB_WORKSPACE
+          echo ""
+       
        - name: simple javascript action
          id: greet
          uses: actions/hello-world-javascript-action@v1
