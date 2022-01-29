@@ -19,7 +19,7 @@ jobs:
          run: |
           pwd
           ls
-          echo $GITHUB_SHA
+          eecho $GITHUB_SHA
           echo $GITHUB_REPOSITORY 
           echo $GITHUB_WORKSPACE
           echo ""
