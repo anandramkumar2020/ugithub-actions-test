@@ -1,9 +1,23 @@
 name: Shell commands
-
 on: 
  #push
- pull_request:
+ #pull_request:
 
+ #Event is Push to main , this is same for any event
+  pull_request:
+      branches: 
+        - main
+        - 'feature/*' #matches feature/featA etc
+                      #does not match feature/feat/a (forward slash)
+                      #* --> tobe one word
+        - 'feature/**' # --> Include / in between, any string
+        - '!feature/featc' # --> Ignore this branch
+      tags:
+        - v1.*  
+      #paths:
+      #  - "..*.js"
+      paths-ignore:
+        - "/docs/**"
 jobs:
   run-shell-command:
    runs-on: ubuntu-latest
