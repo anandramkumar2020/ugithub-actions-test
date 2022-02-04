@@ -24,6 +24,9 @@ jobs:
    steps:
     - name: echo a string
       run: echo "Hello KP  Anand Ramkumar"
+      timeout-minutes: 5 # Default is 360 (6 hrs)
+                         # If Job does not complete in 6 hrs, it trgeers the timeout 
+      continue-onerror: true # By default its false, On error following steps will not be executed
     
     - name: Multiple commands
       run: |
