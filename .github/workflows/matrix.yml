@@ -4,14 +4,20 @@ on: [push]
 
 jobs:
   node-version:
-    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        os: [ubuntu-latest,macos-latest,windows-latest]
+        node-version: [6, 8, 10]
+
+    runs-on: ${{ matrix.os }} # Picks OS from the list of os
     steps:
       - name: Log node version
         run: node -v
 
       - uses: actions/setup-node@v2
         with:
-          node-version: '10.x'
+          node-version: ${{ matrix.node-version }} # Picks node version from the list of node
 
       - name: Log node version after changing
         run: node -v
